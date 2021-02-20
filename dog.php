@@ -13,10 +13,10 @@ class dog
     function __construct($name,$color,$peso)
     {
         
-        $error_nombre=$this->set_dog_mane($name)==true?'true':'false';
-        $error_color=$this->set_dog_color($color)==true?'true':'false';
+        $error_nombre=$this->set_dog_mane($name)==true?'true,':'false,';
+        $error_color=$this->set_dog_color($color)==true?'true,':'false,';
         $error_peso=$this->set_dog_weight($peso)==true?'true':'fase';
-        $message_error="$error_nombre.$error_color.$error_peso";
+        $this->message_error=$error_nombre.$error_color.$error_peso;
 
 
     }
@@ -64,8 +64,9 @@ class dog
     }
     function set_dog_weight($weight)
     {
+        $error_message=true;
 
-        $this->dog_weight = $weight;
+        ctype_digit($weight) && $weight>0?$this->dog_weight = $weight:$error_message=false;
 
         return true;
     }
