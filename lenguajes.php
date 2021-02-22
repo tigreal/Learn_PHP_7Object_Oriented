@@ -1,9 +1,13 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-
-    $idioma;
     if (isset($_POST['idioma'])) {
-
+    }
+}
+class saludo
+{
+    private $idioma;
+    public function saludoEnDiferentesIdiomas($var)
+    {
         $idioma = $_POST['idioma'];
         switch ($idioma) {
             case 'ingles':
@@ -20,10 +24,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 # code...
                 break;
         }
-    }
 
-    //echo "hola mundu";
+
+        //echo "hola mundu";
+
+    }
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
