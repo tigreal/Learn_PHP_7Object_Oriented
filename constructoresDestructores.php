@@ -4,7 +4,7 @@ class construcorDestructor
 {
     public $val1;
     public $val2;
-    /*el contrutor no puede tener un retorno 
+    /*el contrutor no puede tener un retorno Return 0
     este tipo de clases son especiales las de doble
     guion bajo */
     public function __construct($var, $var2){
