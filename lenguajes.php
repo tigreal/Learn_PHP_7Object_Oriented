@@ -1,6 +1,11 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['idioma'])) {
+        //$idioma = $_POST['idioma'];
+        $saludo=new saludo();
+        $saludo->saludoEnDiferentesIdiomas($_POST['idioma']);
+        
+        unset($saludo);
     }
 }
 class saludo
@@ -8,22 +13,24 @@ class saludo
     private $idioma;
     public function saludoEnDiferentesIdiomas($var)
     {
-        $idioma = $_POST['idioma'];
-        switch ($idioma) {
+        
+        echo "<p>";
+        switch ($var) {
             case 'ingles':
-                echo "Usted eligio el idioma: " . $idioma;
+                echo "Usted eligio el idioma: " . $var;
                 break;
             case 'espanol':
-                echo "Usted eligio el idioma: " . $idioma;
+                echo "Usted eligio el idioma: " . $var;
                 break;
             case 'italiano':
-                echo "Usted eligio el idioma: " . $idioma;
+                echo "Usted eligio el idioma: " . $var;
                 break;
 
             default:
                 # code...
                 break;
         }
+        echo "</p>";
 
 
         //echo "hola mundu";
