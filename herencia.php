@@ -9,8 +9,8 @@ class rectangulo
 
     public function __construct($ancho, $alto)
     {
-        $this->ancho;
-        $this->alto;
+        $this->ancho=$ancho;
+        $this->alto=$alto;
     }
     
 
@@ -33,7 +33,18 @@ class cuadrado extends rectangulo
 {
         function __construct($lado)
         {
-            /** al heredar la clase heredo todos los atributos y metods*/
+            /** al heredar de la clase rectangulo heredo todos los atributos y metodos
+             * pero el contructor no se llama de forma automatica
+             * por lo que crearemos su propio constructor quien iniciara 
+             * su propio constructor
+             *
+            */
+            /**
+             * aqui colocamos el mismo valor a alto y ancho
+             * porque el cuadrado tiene un solo lado
+             */
+            $this->alto=$lado;
+            $this->ancho=$lado;
         }
     
 }
@@ -43,8 +54,20 @@ class cuadrado extends rectangulo
  * el la clase pabre rectangulo sus propiedades cuando instanciemos usaremos los atributos
  * y metodos de la clase padre
 */
-/**aqui instanciamos un objeto de la clase rectangulo dandole un */
-$obj1=new rectangulo(44,55);
+/**aqui instanciamos un objeto de la clase rectangulo dandole un 
+ * ancho y  un alto 
+*/
+$obj1=new rectangulo(6,5);
+/**aqui instanciomos un objeto para la clase cuadrado y como definimos
+ * su propio constructor vamos solo asinamos el mismo lado a las propiedades
+ * ancho y alto que fueron eredadas
+ * 
+ */
+$obj2=new cuadrado(5);
 
+echo $obj1->obtenerArea();
+echo "</br>";
+echo $obj2->obtenerArea();
 
 ?>
+
