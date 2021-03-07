@@ -1,5 +1,5 @@
 <?php
-$ejemplar = new rectangulo();
+$ejemplar = new rectangulo(0,0);
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['alto']) && isset($_POST['ancho']) && ctype_digit($_POST['ancho']) && ctype_digit($_POST['alto'])) {
 
