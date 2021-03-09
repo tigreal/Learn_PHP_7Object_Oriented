@@ -46,13 +46,15 @@ classNombre::nombrePropiedad();
  * tambien podemos llamar al metodo desde otra clase heredada
  * con el uso de la clase padre al principio los dos puntos y el nombre del metodo o propiedad
  * el objetivo de esto seria ver que clases estan en el padre y que se puedan acceder
- * deacuerdo a su visibilidad
+ * deacuerdo a su visibilidad, es mejor usar el key "parent", 
+ * poque se minimiza las fallas que puedan aver en el cambio 
+ * de nombre de la clase base
  */
 
 class algunClase extends clasePadre
 {
     function __construct(){
-        clasePadre::algunMetodo();
+        parent::algunMetodo();
     }
 }
 
