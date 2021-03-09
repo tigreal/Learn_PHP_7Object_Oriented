@@ -63,7 +63,7 @@ $hijo->printVar("publico");
  * valor modificado solo en el objeto padre, pero mostrara el 
  * valor original public en la subclase que es la heredad, 
  * esto se debe porque la propiedad $publico, es representada
- * como una entidad seprarda in cada objeto 
+ * como una entidad seprarda en cada objeto 
  */
 echo "</br><p>mostrando el valor de la propiedad/variable protegido</p>";
 echo "<p>mostrando la variable protegido:</br></p>";
