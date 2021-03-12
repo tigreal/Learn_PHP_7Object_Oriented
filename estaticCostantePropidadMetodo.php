@@ -162,8 +162,21 @@ class mascota
     }
 
 /**se instancia dos objetos para el cotador se incremente */
-$obj11=new gato();
-$obj22=new perro();
+echo "<p>intanciando al gato niki</p>";
+$obj11=new gato("niki");
+echo "<p>cuantas mascotas tenemos ahora</p>";
+echo mascota::obtenerContador();
+echo "<p>intanciando al perro berno</p>";
+$obj22=new perro("berno");
+echo "<p>cuantas mascotas tenemos ahora</p>";
+echo mascota::obtenerContador();
+echo "<p>huvo un accidente con el gato nikki</p>";
+
+unset($obj11);
+echo "<p>cuantas mascotas tenemos ahora</p>";        
+echo mascota::obtenerContador();
+
+
 
 
 

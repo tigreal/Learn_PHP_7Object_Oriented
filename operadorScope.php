@@ -3,18 +3,29 @@
  * operador de alcance son dos puentos seguidos (::), se utiliza para acceder a los mienbros 
  * atravez de la clase, no objetos
  */
+
 class pollo
 {
     public $presa= "pechuga";
-    self::comer("pollo");
-    public function comer($presa)
+    function __construct()
     {
-        echo "usted esta comiendo una: $presa";
+        /**aunq se puede llamar de esta forma al metodo
+         * no es la forma correcta ya que self se usa para 
+         * metodos estaticos, pero no da un warning el editor
+         * tampoco se puede llamar en clase directamente
+         * siempre tienen que estar dentro de algun metodo
+         */
+        self::comer("pollo");
     }
     
-
-
+    public  function comer($presa)
+    {
+        //echo "usted esta comiendo una: $presa";
+    }
+    
 }
+
+ 
 /**hay dos lugares donde se utiliza este operador
  * 
  * dentro de la clase para evitar confusiones cuando las clases
