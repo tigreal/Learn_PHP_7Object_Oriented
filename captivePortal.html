@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="internet.jpg" alt="login image">
+    
+    <form method="post" action="$PORTAL_ACTION$">
+        <div style="display: flex; flex-direction: column;">
+        <label for="">Usuario</label>
+        <input name="auth_user" type="text">
+        <label for="">Claver</label>
+        <input name="auth_pass" type="password">
+        <!-- <input name="auth_voucher" type="text"> -->
+        <input name="redirurl" type="hidden" value="$PORTAL_REDIRURL$">
+        <input name="zone" type="hidden" value="$PORTAL_ZONE$">
+        <input name="accept" type="submit" value="Continue">
+    </div>
+     </form>
+    
+</body>
+</html>
