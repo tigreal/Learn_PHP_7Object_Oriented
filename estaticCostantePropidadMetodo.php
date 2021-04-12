@@ -105,8 +105,8 @@ class ejemploConstante
 
     public function llamarConstante()
     {
-        echo self::PI;
-    }
+        echo "esto es el valor PI", self::PI;
+    }   
 
 }
 
