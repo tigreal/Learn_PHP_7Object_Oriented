@@ -50,6 +50,7 @@ class rectangulo
 </head>
 
 <body>
+    <h5>bLADIMIR</h5>
     <form action="calculoRectangulo.php" method="post">
         <label for="">ancho</label>
         <input type="text" name="ancho" id="">
